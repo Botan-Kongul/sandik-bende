@@ -56,7 +56,7 @@ invalidVoteButton.addEventListener("click", () => {
 resetOyButton.addEventListener("click", () => {
   const previousResultsRow = document.createElement("tr");
   previousResultsRow.innerHTML = `
-    <td>${getFormattedDate()}</td>
+ 
     <td>${candidateCounts.kk_oy}</td>
     <td>${candidateCounts.rte_oy}</td>
     <td>${candidateCounts.invalid_vote}</td>
@@ -83,15 +83,4 @@ function updateVotes() {
 
   // Sonuçları localStorage'a kaydet
   localStorage.setItem("candidateCounts", JSON.stringify(candidateCounts));
-}
-
-function getFormattedDate() {
-  const now = new Date();
-  const options = {
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-  };
-  return now.toLocaleDateString("tr-TR", options);
 }
