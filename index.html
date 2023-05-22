@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandık Bende</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="h-screen bg-slate-100 flex items-center justify-center flex-col gap-2">
+    <div class="font-bold text-2xl bg-black text-white italic p-1">Sandık Bende</div>
+    <div class="font-light">Toplam Oy : <span id="toplam_oy" class="text-xl font-bold">0</span></div>
+    <div class="flex  justify-center items-center gap-4">
+      <div class="p-4 flex flex-col justify-center items-center border-2 border-red-400 gap-2">
+        <div>
+          <img class="h-40 rounded-full" src="./kk.png" alt="">
+        </div>
+        <div>Kemal Kılıçdaroglu</div>
+        <div id="kk_oy" class="bg-black py-1 px-4 text-white rounded">0</div>
+        <div>
+          <button id="kk_plus" class="bg-red-300 py-1 px-4 rounded font-bold">
+            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+          </button>
+          <button id="kk_minus" class="bg-red-300 py-1 px-4 rounded font-bold">
+            <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
+          </button>
+        </div>
+      </div>
+      <div class="p-4 flex flex-col justify-center items-center border-2 border-yellow-400 gap-2">
+        <div>
+          <img class="h-40 rounded-full" src="./rte.jpg" alt="">
+        </div>
+        <div>Recep Tayip Erdogan</div>
+        <div id="rte_oy" class="bg-black py-1 px-4 text-white rounded">0</div>
+        <div>
+          <button id="rte_plus" class="bg-yellow-300 py-1 px-4 rounded font-bold">
+            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+          </button>
+          <button id="rte_minus" class="bg-yellow-300 py-1 px-4 rounded font-bold">
+            <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-2">
+      <div id="invalid_vote" class="bg-black py-1 px-4 text-white rounded">0</div>
+      <button id="invalid_vote_button" class="bg-black text-white py-1 px-12 rounded font-bold">Geçersiz Oy</button>
+    </div>
+    <div class="max-w-2xl text-center font-thin">
+      <span class="font-bold">Sorumluluk Reddi:</span>
+      [Sandık Bende] uygulamasının geliştiricileri, kullanıcıların uygulama üzerinden paylaştıkları
+      bilgilerden veya uygulamanın kullanımından kaynaklanan herhangi bir zarardan sorumlu değildir. -Botan Kongül
+    </div>
+    <div id="reset_oy" class="bg-black text-white py-1 px-8 rounded">Oyu Sıfırla</div>
+    <div id="sonuclar">
+      <table id="previous_results" class="min-w-full divide-y divide-gray-200">
+        <thead>
+          <tr>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Oturum
+            </th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Kemal
+              Kılıçdaroğlu</th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Recep
+              Tayyip Erdoğan</th>
+            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Geçersiz Oy</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200 text-center">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
